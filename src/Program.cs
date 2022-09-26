@@ -41,7 +41,7 @@ Parser.Default.ParseArguments<Options>(args)
                 if (!newFilename.Contains(iso) && (o.IncludeIso || o.IncludeAll))
                     newFilename += iso;
 
-                var focalLength = $"{tag.FocalLength}mm";
+                var focalLength = $"-{tag.FocalLength}mm";
                 
                 if (!newFilename.Contains(focalLength) && (o.IncludeFocalLength || o.IncludeAll))
                     newFilename += focalLength;
@@ -50,7 +50,7 @@ Parser.Default.ParseArguments<Options>(args)
                 
                 newFilename = $"{Path.GetDirectoryName(file)}/{newFilename}";
 
-                if (o.RemoveTopaz)
+                if (o.IncludeAll || o.RemoveTopaz)
                     newFilename = newFilename
                         .Replace("-Edit", string.Empty)
                         .Replace("-Sharpen", string.Empty);
