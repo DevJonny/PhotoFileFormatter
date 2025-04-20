@@ -2,18 +2,19 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>photo-rename</ToolCommandName>
         <PackageOutputPath>../nupkg</PackageOutputPath>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
+        <LangVersion>default</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="CommandLineParser" Version="2.9.1" />
-      <PackageReference Include="Spectre.Console" Version="0.44.0" />
+      <PackageReference Include="Spectre.Console" Version="0.50.0" />
       <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
       <PackageReference Include="TagLibSharp" Version="2.3.0" />
     </ItemGroup>
